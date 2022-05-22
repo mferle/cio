@@ -1,0 +1,136 @@
+steps:
+  STG_PBP_RECEIVING-6:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: 2
+      locationName: TGT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 65
+              stepCounter: 6
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: PBP_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 23
+                    stepCounter: "3"
+                transform: ""
+          - columnReference:
+              columnCounter: 66
+              stepCounter: 6
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: GSIS_ID
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 24
+                    stepCounter: "3"
+                transform: ""
+          - columnReference:
+              columnCounter: 67
+              stepCounter: 6
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: YARDS_GAINED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 25
+                    stepCounter: "3"
+                transform: ""
+          - columnReference:
+              columnCounter: 68
+              stepCounter: 6
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TOUCHDOWN
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 26
+                    stepCounter: "3"
+                transform: ""
+          - columnReference:
+              columnCounter: 69
+              stepCounter: 6
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INCOMPLETE_PASS
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 27
+                    stepCounter: "3"
+                transform: ""
+          - columnReference:
+              columnCounter: 70
+              stepCounter: 6
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FUMBLE_LOST
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 28
+                    stepCounter: "3"
+                transform: ""
+          - columnReference:
+              columnCounter: 71
+              stepCounter: 6
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: INTERCEPTION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 29
+                    stepCounter: "3"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: PBP_RECEIVING
+            join:
+              joinCondition: FROM {{ ref('SRC', 'PBP_RECEIVING') }} "PBP_RECEIVING"
+            name: STG_PBP_RECEIVING
+            noLinkRefs: []
+      name: STG_PBP_RECEIVING
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "6"
